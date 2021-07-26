@@ -4,6 +4,7 @@ import { ChatEngineWrapper, ChatSocket, ChatFeed, ChatList } from 'react-chat-en
 
 import { DEVELOPMENT, PROJECT_ID, CHAT_ID, CHAT_ACCESS_KEY } from '../../consts'
 
+
 import { Row, Col } from 'react-grid-system'
 import { setConfiguration } from 'react-grid-system';
  

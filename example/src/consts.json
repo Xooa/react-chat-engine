@@ -1,0 +1,9 @@
+{
+  "DEVELOPMENT": false,
+  "PROJECT_ID": "e9f799b7-45fd-442a-a5b5-97edf2a1f340",
+  "USER_NAME": "Pradeep",
+  "USER_SECRET": "secret_1234",
+  "CHAT_ID": "ca-67b6a87d-615e-41ff-887a-5f0e648996c8",
+  "CHAT_ACCESS_KEY": "e9f799b7-45fd-442a-a5b5-97edf2a1f340",
+  "ROOT_URL": "https://api.chatengine.io/"
+}

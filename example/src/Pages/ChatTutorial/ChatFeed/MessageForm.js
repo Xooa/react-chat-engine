@@ -1,6 +1,8 @@
 import React from 'react';
 
-import { SendOutlined, PictureOutlined } from '@ant-design/icons'
+ 
+import SendOutlinedIcon from '@material-ui/icons/SendOutlined';
+import ImageOutlinedIcon from '@material-ui/icons/ImageOutlined';
 
 import { sendMessage, isTyping } from 'react-chat-engine'
 
@@ -46,7 +48,7 @@ export default class MessageForm extends React.Component {
 
                 <label htmlFor="upload-button">
                     <span className='image-button'>
-                        <PictureOutlined className='picture-icon' />
+                        <ImageOutlinedIcon className='picture-icon' />
                     </span>
                 </label>
 
@@ -59,7 +61,7 @@ export default class MessageForm extends React.Component {
                 />
                 
                 <button type="submit" className='send-button'>
-                    <SendOutlined className='send-icon' />
+                    <SendOutlinedIcon className='send-icon' />
                 </button>
             </form>
         )

@@ -16,7 +16,7 @@ const CreateChat = () => {
                 id='ce-ice-breaker-text' 
                 style={{ color: '#afafaf' }}
             >
-                Create a new chat to get started.
+               You have no chats
             </div>
 
             <img

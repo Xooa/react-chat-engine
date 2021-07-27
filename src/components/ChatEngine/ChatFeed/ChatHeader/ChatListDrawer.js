@@ -1,7 +1,5 @@
 import React, { useState, useContext } from 'react'
-
-import { MenuOutlined } from '@ant-design/icons'
-
+import MenuIcon from '@material-ui/icons/Menu';
 import { ChatEngineContext } from '../../../Context'
 
 import ChatList from '../../ChatList'
@@ -13,11 +11,11 @@ const ChatListDrawer = props => {
 
     return (
         <div> 
-            <MenuOutlined
+            <MenuIcon
                 onClick={() => setIsOpen(true)}
                 style={{ color: 'rgb(24, 144, 255)', outline: 'none' }} 
             />
-
+ 
             { 
                 isOpen &&
                 <div style={styles.drawerContainer}>

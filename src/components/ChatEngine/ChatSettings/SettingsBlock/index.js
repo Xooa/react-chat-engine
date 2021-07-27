@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
-
-import { LeftOutlined } from '@ant-design/icons'
+import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos';
 
 const SettingsBlock = (props) => {
     const [collapsed, setCollapsed] = useState(true)
@@ -24,7 +23,7 @@ const SettingsBlock = (props) => {
                     { props.label }
                 </div>
 
-                <LeftOutlined 
+                <ArrowBackIosIcon 
                     style={{
                         float: 'right',
                         position: 'relative',

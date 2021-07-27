@@ -4,7 +4,7 @@ import CloseOutlinedIcon from '@material-ui/icons/CloseOutlined'
 
 import { ChatEngineContext } from '../../../Context'
 
-import { newChat, Button, TextInput } from 'react-chat-engine'
+import { newChat, Button, TextInput } from '@xooa/react-chat-engine'
 
 const NewChatForm = (props) => {
   const { conn } = useContext(ChatEngineContext)

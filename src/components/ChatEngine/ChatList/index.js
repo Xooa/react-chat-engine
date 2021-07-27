@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useRef, useState } from 'react'
 
-import { ChatEngineContext, getLatestChats, getChatsBefore } from 'react-chat-engine'
+import { ChatEngineContext, getLatestChats, getChatsBefore } from '@xooa/react-chat-engine'
 
 import { getDateTime } from '../Utilities/timezone'
 

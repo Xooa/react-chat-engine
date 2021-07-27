@@ -1,6 +1,6 @@
 import React, { useContext } from 'react'
 
-import { Button, deleteChat, ChatEngineContext } from 'react-chat-engine'
+import { Button, deleteChat, ChatEngineContext } from '@xooa/react-chat-engine'
 
 import SettingsBlock from '../SettingsBlock'
 

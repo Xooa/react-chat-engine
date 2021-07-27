@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useRef } from 'react'
 
-import { ChatEngineContext } from 'react-chat-engine'
+import { ChatEngineContext } from '@xooa/react-chat-engine'
 
 import { isImage } from './file'
 

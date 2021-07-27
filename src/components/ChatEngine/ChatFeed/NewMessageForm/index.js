@@ -2,7 +2,7 @@ import React, { useContext, useState } from 'react'
 
 import { ChatEngineContext } from '../../../Context'
 
-import { sendMessage, isTyping } from 'react-chat-engine'
+import { sendMessage, isTyping } from '@xooa/react-chat-engine'
 
 import FilesRow from './FilesRow'
 import ImagesRow from './ImagesRow'

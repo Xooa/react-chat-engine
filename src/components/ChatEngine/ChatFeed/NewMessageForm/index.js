@@ -149,7 +149,7 @@ const styles = {
   NewMessageFormContainer: {
     position: 'absolute',
     bottom: '0px',
-    width: '100%',
+    width: '100% !important',
     backgroundColor: 'white'
   },
   inputContainer: {

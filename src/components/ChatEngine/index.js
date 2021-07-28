@@ -33,7 +33,7 @@ const ChatEngine = props => {
           }
         </Col>
 
-        <Col xs={12} sm={6} style={{ height: height ? height : '' }}>
+        <Col xs={12} sm={9} style={{ height: height ? height : '' }}>
           {
             props.renderChatFeed ?
             props.renderChatFeed(propsAndContext) :
@@ -41,13 +41,13 @@ const ChatEngine = props => {
           }
         </Col>
 
-        <Col xs={0} sm={3} style={{ height: height ? height : '' }}>
+        {/* <Col xs={0} sm={3} style={{ height: height ? height : '' }}>
           {
             props.renderChatSettings ?
             props.renderChatSettings(props) :
             <ChatSettings { ...props} />
           }
-        </Col>
+        </Col> */}
       </Row>
     </div>
   )

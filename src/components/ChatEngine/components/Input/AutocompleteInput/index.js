@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 
-import CloseOutlinedIcon from '@material-ui/icons/CloseOutlined'
+import CloseIcon from '@material-ui/icons/Close'
 
 export default class AutoCompleteInput extends Component {
   state = {
@@ -64,7 +64,7 @@ export default class AutoCompleteInput extends Component {
               className='ce-autocomplete-close'
               onClick={() => this.onChange('', false)}
             >
-              <CloseOutlinedIcon />
+              <CloseIcon />
             </div>
           )}
         </div>

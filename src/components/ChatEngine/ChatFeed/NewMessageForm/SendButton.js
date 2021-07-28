@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
  
-import ArrowUpwardOutlinedIcon from '@material-ui/icons/ArrowUpwardOutlined'
+import ArrowUpwardIcon from '@material-ui/icons/ArrowUpward';
 
 const SendButton = () => {
   const [hover, setHover] = useState(false)
@@ -19,7 +19,7 @@ const SendButton = () => {
           borderRadius: '8px'
         }}
       >
-        <ArrowUpwardOutlinedIcon style={{ color: 'white' }} />
+        <ArrowUpwardIcon style={{ color: 'white' }} />
       </div>
     </div>
   )

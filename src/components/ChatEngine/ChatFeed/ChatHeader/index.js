@@ -111,9 +111,11 @@ const styles = {
   },
   titleText: {
     fontSize: '24px',
+    color: '#f2572f',
     fontWeight: '600'
   },
   subtitleText: {
-    fontSize: '12px'
+    fontSize: '12px',
+    color: 'grey'
   }
 }

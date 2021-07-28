@@ -108,7 +108,12 @@ const NewMessageForm = () => {
         }}
       />
 
-      <div>
+      <div
+        style={{
+          display: 'flex',
+          flexDirection: 'columnReverse'
+        }}
+      >
         <div id='toolbar'>
           <button className='ql-bold'></button>
           <button className='ql-italic'></button>
@@ -119,6 +124,12 @@ const NewMessageForm = () => {
           <button className='ql-link'></button>
         </div>
         <AttachmentsInput
+          style={{
+            top: '10px',
+            position: 'relative',
+            left: '175px',
+            color: '#ffffff'
+          }}
           onSelectFiles={(attachments) => setAttachments(attachments)}
         />
 

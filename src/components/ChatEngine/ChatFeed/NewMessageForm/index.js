@@ -10,16 +10,12 @@ import ImagesRow from './ImagesRow'
 import AttachmentsInput from './AttachmentsInput'
 import SendButton from './SendButton'
 
-const ReactQuill = require('react-quill');
-require('react-quill/dist/quill.snow.css');
+const ReactQuill = require('react-quill')
+require('react-quill/dist/quill.snow.css')
 
 const NewMessageForm = () => {
-  const { 
-    conn, 
-    activeChat, 
-    sendingMessages, 
-    setSendingMessages 
-  } = useContext(ChatEngineContext)
+  const { conn, activeChat, sendingMessages, setSendingMessages } =
+    useContext(ChatEngineContext)
   const [iter, setIter] = useState(0) // Forces attachments update
   const [value, setValue] = useState('')
   const [trigger, setTrigger] = useState(0)
@@ -27,14 +23,21 @@ const NewMessageForm = () => {
 
   const modules = {
     toolbar: {
-      container: "#toolbar",
+      container: '#toolbar'
     }
   }
-  
+
   const formats = [
-    'bold', 'italic', 'underline', 'strike', 'code',
-    'list', 'bullet', 'indent',
-    'link', 'code',
+    'bold',
+    'italic',
+    'underline',
+    'strike',
+    'code',
+    'list',
+    'bullet',
+    'indent',
+    'link',
+    'code'
   ]
 
   function onRemove(index) {
@@ -43,22 +46,32 @@ const NewMessageForm = () => {
     setAttachments(newAttachments)
     setIter(iter + 1)
   }
-  
+
   function handleChange(value) {
     setValue(value)
     setTrigger((trigger + 1) % 4)
-    if (trigger === 1) { conn && isTyping(conn, activeChat) }
+    if (trigger === 1) {
+      conn && isTyping(conn, activeChat)
+    }
   }
-  
+
   function handleSubmit() {
-    if (!conn) return 
+    if (!conn) return
 
     let text = value.trim()
-    if (text.length > 11 && text.slice(-11) === '<p><br></p>') { text = text.substr(0, text.length - 11) }
+    if (text.length > 11 && text.slice(-11) === '<p><br></p>') {
+      text = text.substr(0, text.length - 11)
+    }
 
     const custom_json = { sender_id: Date.now().toString() }
     const sender_username = conn.userName ? conn.userName : conn.senderUsername
-    const data = { text, attachments, custom_json, sender_username, chat: activeChat }
+    const data = {
+      text,
+      attachments,
+      custom_json,
+      sender_username,
+      chat: activeChat
+    }
 
     if (text.length > 0 || attachments.length > 0) {
       sendMessage(conn, activeChat, data, () => {})
@@ -67,13 +80,13 @@ const NewMessageForm = () => {
     setValue('')
     setAttachments([])
 
-    let newSendingMessages = {...sendingMessages}
+    let newSendingMessages = { ...sendingMessages }
     newSendingMessages[data.custom_json.sender_id] = data
     setSendingMessages(newSendingMessages)
   }
 
   return (
-    <div 
+    <div
       id='msg-form-container'
       style={styles.NewMessageFormContainer}
       className='ce-message-form-container'
@@ -88,42 +101,50 @@ const NewMessageForm = () => {
         modules={modules}
         formats={formats}
         onChange={handleChange.bind(this)}
-        onKeyDown={(e) => { if (e.keyCode === 13) { handleSubmit() } }}
+        onKeyDown={(e) => {
+          if (e.keyCode === 13) {
+            handleSubmit()
+          }
+        }}
       />
 
-      <div id="toolbar">
-        <button className="ql-bold"></button>
-        <button className="ql-italic"></button>
-        <button className="ql-underline"></button>
-        <button className="ql-strike"></button>
+      <div id='toolbar'>
+        <div className='toolbar-options'>
+          <button className='ql-bold'></button>
+          <button className='ql-italic'></button>
+          <button className='ql-underline'></button>
+          <button className='ql-strike'></button>
 
-        <button className="ql-code"></button>
-        <button className="ql-link"></button>
-        <AttachmentsInput onSelectFiles={(attachments) => setAttachments(attachments)} />
+          <button className='ql-code'></button>
+          <button className='ql-link'></button>
+        </div>
+        <AttachmentsInput
+          onSelectFiles={(attachments) => setAttachments(attachments)}
+        />
 
-        <div 
+        <div
           onClick={handleSubmit.bind(this)}
-          style={{ position: 'absolute', right: '5px', bottom: '37px' }} 
+          style={{ position: 'absolute', right: '5px', bottom: '37px' }}
         >
           <SendButton />
         </div>
       </div>
     </div>
-  );
+  )
 }
 
 export default NewMessageForm
 
 const styles = {
-  NewMessageFormContainer: { 
-    position: 'absolute', 
-    bottom: '0px', 
-    width: '100%', 
-    backgroundColor: 'white',
+  NewMessageFormContainer: {
+    position: 'absolute',
+    bottom: '0px',
+    width: '100%',
+    backgroundColor: 'white'
   },
-  inputContainer: { 
+  inputContainer: {
     minHeight: '36px',
     paddingTop: '10px',
-    paddingBottom: '6px',
-  },
+    paddingBottom: '6px'
+  }
 }

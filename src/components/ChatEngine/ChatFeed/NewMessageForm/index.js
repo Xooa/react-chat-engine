@@ -108,8 +108,8 @@ const NewMessageForm = () => {
         }}
       />
 
-      <div id='toolbar'>
-        <div className='toolbar-options'>
+      <div>
+        <div id='toolbar'>
           <button className='ql-bold'></button>
           <button className='ql-italic'></button>
           <button className='ql-underline'></button>

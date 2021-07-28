@@ -19,7 +19,7 @@ const Body = (props) => {
 
 export default Body
 
-const style = {
+const styles = {
   msg_section: {
     background: '3f2572f'
   }

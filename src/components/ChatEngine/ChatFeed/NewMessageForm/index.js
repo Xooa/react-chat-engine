@@ -110,8 +110,7 @@ const NewMessageForm = () => {
 
       <div
         style={{
-          display: 'flex',
-          flexDirection: 'columnReverse'
+          position: 'relative'
         }}
       >
         <div id='toolbar'>
@@ -126,8 +125,8 @@ const NewMessageForm = () => {
         <AttachmentsInput
           style={{
             top: '10px',
-            position: 'relative',
-            left: '175px',
+            position: 'absolute',
+            right: '45%',
             color: '#ffffff'
           }}
           onSelectFiles={(attachments) => setAttachments(attachments)}

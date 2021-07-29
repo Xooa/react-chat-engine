@@ -30,6 +30,7 @@ const ChatLoader = (props) => {
   return (
     <div ref={ref}>
       <div
+        className='chat-loader'
         style={{
           textAlign: 'center',
           backgroundColor: '#e2e2e2',

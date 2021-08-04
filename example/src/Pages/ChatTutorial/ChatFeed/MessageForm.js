@@ -4,7 +4,7 @@ import React from 'react';
 import SendOutlinedIcon from '@material-ui/icons/SendOutlined';
 import ImageOutlinedIcon from '@material-ui/icons/ImageOutlined';
 
-import { sendMessage, isTyping } from 'react-chat-engine'
+import { sendMessage, isTyping } from '@xooa/react-chat-engine'
 
 export default class MessageForm extends React.Component {
     state = { value: '' }

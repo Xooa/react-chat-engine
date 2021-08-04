@@ -6,7 +6,7 @@ import { login, logout } from '../../Actions/Accounts'
 
 import { ROOT_URL, DEVELOPMENT, PROJECT_ID } from '../../consts'
 
-import { ChatEngineWrapper } from 'react-chat-engine'
+import { ChatEngineWrapper } from '@xooa/react-chat-engine'
 
 import ChatEngine from './ChatEngine'
 
